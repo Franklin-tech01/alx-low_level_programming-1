@@ -1,32 +1,24 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
+ *main - print first 50 fibonacci
  *
- * Description: Calculates the sum of even fib numbers
- * lower than 4,000,000
- *
- * Return: Always 0(success)
+ *Return: 0 always.
  */
-
 int main(void)
 {
-	unsigned long fib1 = 0, fib2 = 1, fibsum;
-	float total_sum;
+	long int i, x = 1, y = 2, sum = 0, tSum = 0;
 
-	while (1)
+	for (i = 0; i < 49; i++)
 	{
-		fibsum = fib1 + fib2;
-		if (fibsum > 4000000)
-			break;
+		if ((y % 2 == 0) && (y <= 4000000))
+		{
+			tSum = tSum + y;
+		}
+		sum = x + y;
+		x = y;
+		y = sum;
 
-		if ((fibsum % 2) == 0)
-			total_sum += fibsum;
-
-		fib1 = fib2;
-		fib2 = fibsum;
 	}
-	printf("%.0f\n", total_sum);
-
+	printf("%ld\n", tSum);
 	return (0);
 }

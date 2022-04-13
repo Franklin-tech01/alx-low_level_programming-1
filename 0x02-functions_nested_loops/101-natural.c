@@ -1,21 +1,19 @@
 #include <stdio.h>
-
 /**
-* main - Prints the sum of natural numbers below 1024
-* that are multiplies of 3 or 5
-*
-* Return: Always 0 (success)
-*/
-
+ *main - check for multiples of 3 and 5
+ *
+ *Return: 0 always
+ */
 int main(void)
 {
-	int a, b;
-
-	for (a = 1; a < 1024; a++)
-		{
-		if ((a % 3) == 0 || (a % 5) == 0)
-		b += a;
-		}
-	printf("%d\n", b);
-	return (0);
+int x = 1024, y, sum = 0;
+for (y = 0; y < x; y++)
+{
+if ((y % 3 == 0) || (y % 5 == 0))
+{
+sum = sum + y;
+}
+}
+printf("%d\n", sum);
+return (0);
 }
